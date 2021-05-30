@@ -18,12 +18,17 @@
 
     <!-- Tab links, each one with an onclick event associated with it -->
     <div class="tab">
-    <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
-    <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
-    <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+        <button class="tablinks" onclick="openInfo(event, 'Cart')">Cart</button>
+        <button class="tablinks" onclick="openInfo(event, 'Products')">Products</button>
+        <button class="tablinks" onclick="openInfo(event, 'Client')">Client</button>
+        <button class="tablinks" onclick="openInfo(event, 'Home')" id="defaultOpen">Home</button>
     </div>
 
     <!-- Tab content -->
+    <div id="Home" class="tabcontent">
+        <h2 id="welcome">Welcome to Vivienne's Supermarket</h2>
+        <p id="welcome2">Select the Client tab to get started.</p>
+    </div>
     <div id="Client" class="tabcontent">
     <h2>Client Information</h2>
     <p>Tell us a bit about you. Please select all diet preferences that apply to you:</p>
@@ -37,13 +42,6 @@
             <input type="checkbox" id="none" name="dietSelect" value="none">
             <label for="none"> None of the above</label><br>
         </div>
-        
-        <!-- <select id="dietSelect" name="dietSelect" onchange="populateListProductChoices(this.id, 'displayProduct')">
-        <option value=""></option>
-        <option value="nutAllergy">Vegetarian</option>
-        <option value="GlutenFree">GlutenFree</option>
-        <option value="None">None</option>
-        </select> -->
     </div>
 
     <div id="Products" class="tabcontent">
@@ -65,6 +63,6 @@
     <script src="scripts/groceries.js"></script>
     <script src="scripts/index.js"></script>
 
-    <footer>Made with 💗 by Vivienne Cruz</footer>
+    <footer>Made with 🖤 by Vivienne Cruz</footer>
 </body>
 </html>

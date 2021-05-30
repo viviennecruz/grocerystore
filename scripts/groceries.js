@@ -5,7 +5,7 @@
 
 var products = [
 	{
-		name: "Bananas",
+		name: "Bananas (organic)",
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
@@ -33,7 +33,7 @@ var products = [
 		price: 3.00
 	},
 	{
-		name: "Carrots",
+		name: "Carrots (organic)",
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
@@ -54,14 +54,14 @@ var products = [
 		price: 4.00
 	},
 	{
-		name: "Yogurt",
+		name: "Yogurt (organic)",
 		lactoseIntolerant: false,
 		nutAllergy: true,
         organic: true,
 		price: 4.50
 	},
 	{
-		name: "Chicken breast",
+		name: "Chicken breast (organic)",
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
@@ -75,7 +75,7 @@ var products = [
 		price: 5.60
 	},
 	{
-		name: "Salmon",
+		name: "Salmon (organic)",
 		lactoseIntolerant: true,
 		nutAllergy: true,
         organic: true,
@@ -89,13 +89,13 @@ var products = [
 function restrictListProducts(prods, restriction) {
 	let product_names = [];
 	for (let i=0; i<prods.length; i+=1) {
-		if ((restriction.includes("nutAllergy")) && (restriction.includes("lactoseIntolerant")) && (prods[i].lactoseIntolerant == true) && (prods[i].nutAllergy == true)){
+		if ((restriction.includes("nutAllergy")) && (restriction.includes("lactoseIntolerant")) && (prods[i].lactoseIntolerant == true) && (prods[i].nutAllergy == true) && (prods[i].organic == false)){
 			product_names.push(prods[i]);
 		}
-		else if ((restriction.includes("lactoseIntolerant")) && !(restriction.includes("nutAllergy")) && (prods[i].lactoseIntolerant == true)){
+		else if ((restriction.includes("lactoseIntolerant")) && !(restriction.includes("nutAllergy")) && !(restriction.includes("organic")) && (prods[i].lactoseIntolerant == true) && (prods[i].organic == false)){
 			product_names.push(prods[i]);
 		}
-		else if ((restriction.includes("nutAllergy")) && !(restriction.includes("lactoseIntolerant")) && (prods[i].nutAllergy == true)){
+		else if ((restriction.includes("nutAllergy")) && !(restriction.includes("lactoseIntolerant")) && (prods[i].nutAllergy == true) && (prods[i].organic == false)){
 			product_names.push(prods[i]);
 		}
 		else if ((restriction.includes("organic")) && (prods[i].organic == true)){

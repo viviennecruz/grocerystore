@@ -21,7 +21,8 @@ function openInfo(evt, tabName) {
 
 }
 
-
+// Get the element with id="defaultOpen" and click on it
+document.getElementById("defaultOpen").click();
 	
 // generate a checkbox list from a list of products
 // it makes each product name as the label for the checkbos
